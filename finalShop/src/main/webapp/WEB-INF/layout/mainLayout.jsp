@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -32,7 +33,19 @@
 </head>
 <body>
 	<div style="width: 800px; margin-left: auto; margin-right: auto;">
+		
 		<div>
+			<tiles:insertAttribute name="top2"/>
+		</div>
+
+
+		<div style="width: 900px; margin-left: auto; margin-right: auto;">
+			<tiles:insertAttribute name="prdlist2"/>
+		</div>
+		
+		
+		
+		<%-- <div>
 			<jsp:include page="top.jsp"></jsp:include>
 		</div>
 
@@ -40,7 +53,7 @@
 		<div style="width: 900px; margin-left: auto; margin-right: auto;">
 			<jsp:include page="${pathurl}"></jsp:include>
 		</div>
-	
+ --%>	
 	</div>
 </body>
 </html>

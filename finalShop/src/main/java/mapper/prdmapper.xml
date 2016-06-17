@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="finalshop.prd">
+  
+  <select id="tbproduct" resultType="prd">
+	 select * from TB_PRODUCT
+  </select>
+  
+  <select id="tbproductct" resultType="prd" parameterType="String">
+  	select * from TB_PRODUCT where category_no=#{category}
+  </select>
+  
+  <select id="topproduct" resultType="prd">
+  <![CDATA[
+   select  prd_no, prd_nm, IMG_GEN_FILE_NM from (select o.prd_no, p.prd_nm, p.IMG_GEN_FILE_NM, o.qty from tb_product p, (select prd_no,sum(qty) qty from TB_ORDER_PRODUCT group by prd_no) o where o.prd_no=p.prd_no order by o.qty desc) where rownum <=8  
+ ]]>
+  </select>
+  
+  
+  
+  </mapper>

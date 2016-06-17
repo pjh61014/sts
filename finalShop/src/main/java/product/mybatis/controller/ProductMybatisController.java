@@ -1,4 +1,4 @@
-package product.controller;
+package product.mybatis.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,12 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 import product.service.ProductService;
 
 @Controller
-public class ProductController {
-	
+public class ProductMybatisController {
 	@Autowired
 	ProductService service;
-
-	@RequestMapping(value="/prdlist.do", method=RequestMethod.GET)
+	
+	@RequestMapping(value="/mybatisprdlist.do", method=RequestMethod.GET)
 	public ModelAndView showList(HttpServletRequest req,String category, String pathurl){
 		ModelAndView mav = new ModelAndView();
 		
@@ -36,5 +35,6 @@ public class ProductController {
 		
 
 	}
-	
+
+
 }
