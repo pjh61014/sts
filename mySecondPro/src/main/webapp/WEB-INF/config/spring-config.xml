@@ -25,6 +25,7 @@
 	<context:component-scan base-package="kr.kitri" />
 	<context:component-scan base-package="test" />
 	<context:component-scan base-package="emp" />
+	<context:component-scan base-package="board" />
 	
 	<!-- tiles info setting-->
 	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">

@@ -14,7 +14,7 @@
 		<table width="400" border="1">
 			<tr>
 				<td>회원아이디</td>
-				<td><input type ="hidden" name="id" value="<%=userDetails.getId() %>"><%=userDetails.getId() %>
+				<td><input type ="hidden" name="id" value="<%=userDetails.getId() %>"><%=userDetails.getId() %></td>
 			</tr>
 			<tr>
 				<td>회원패스워드</td>

@@ -9,12 +9,12 @@
 
 <style type="text/css">
 	#left{
-			width:25%;
+			width:20%;
 			float: left;
 				
 	}
 	#content{
-			width:75%;
+			width:80%;
 			float: right;
 				
 	}

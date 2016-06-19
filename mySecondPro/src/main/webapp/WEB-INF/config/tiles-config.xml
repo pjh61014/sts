@@ -51,6 +51,21 @@
 		<put-attribute name="content" value="/WEB-INF/emp/update.jsp"></put-attribute>
 	</definition>
 	
+	<definition name="board" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/board.jsp"></put-attribute>
+	</definition>
 	
+	<definition name="board_write" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/board_write.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="board_read" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/board_read.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="board_update" extends="mainTemplate">
+		<put-attribute name="content" value="/WEB-INF/board/board_update.jsp"></put-attribute>
+	</definition>
+		
 		
 </tiles-definitions>

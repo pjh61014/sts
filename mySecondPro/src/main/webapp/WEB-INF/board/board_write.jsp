@@ -12,6 +12,8 @@
 <body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
 <form name="form1" method="post" action="board_reg.do">
 <div class="container">
+
+
 <table align="center" cellpadding="0" cellspacing="0" width="479">
     <tr>
         <td width="469" colspan="2" height="42">
@@ -28,7 +30,7 @@
             <p><code><b>아이디</b></code></p>
         </td>
         <td width="359">
-            <p><code><input type="text" name="memid" size="30"></code></p>
+            <p><code><input type="text" name="mem_id" size="30"></code></p>
         </td>
     </tr>
     <tr>
@@ -76,8 +78,7 @@
     <tr>
         <td width="479" colspan="2" align="center">
 	<button type="submit" class="btn btn-success">게시물 등록</button>        
-	<button type="button" class="btn btn-info" onclick="location.href='board_write.do'">게시물 수정</button>        
-	<button type="button" class="btn btn-danger" onclick="location.href='board_write.do'">게시물 삭제</button>       
+	
 
 	 </td>
     </tr>

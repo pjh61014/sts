@@ -21,6 +21,7 @@
 		<h5><a href="count.do">인원수확인(mybatis기반)</a></h5>
 		<h5><a href="mybatislist.do">전체목록확인(mybatis기반)</a></h5>
 		<h5><a href="mybatissearch.do">회원검색(mybatis기반)</a></h5>
+		<h5><a href="board_list.do">게시판(mybatis기반)</a></h5>
 				
 	</div>
 

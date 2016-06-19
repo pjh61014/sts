@@ -6,9 +6,12 @@
   <configuration>
   	<typeAliases>
   		<typeAlias type="emp.dto.MyEmpDTO" alias="emp"/>
+  		<typeAlias type="board.dto.BoardDTO" alias="brd"/>
   	</typeAliases>
   <mappers>
   	<mapper resource="mapper/empmapper.xml"/>
-  
+  	<mapper resource="mapper/brdmapper.xml"/>
   </mappers>
   </configuration>
+  
+   

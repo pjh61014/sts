@@ -16,7 +16,7 @@
 	<h1>회원목록(MVC)</h1>
 	
 	<hr/>
-	<table align="center" border="1" width="600">
+	<table align="center" border="1" width="500">
 		<tr bgcolor="skyblue">
 			<th>아이디</th><th>패스워드</th><th>성명</th>
 			<th>주소</th><th>부서번호</th>
