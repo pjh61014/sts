@@ -42,7 +42,7 @@
   	<small class="text-muted">수정할 내용을 입력해주세요</small>
   </fieldset>
  
-  <button type="submit" class="btn btn-primary">수정</button>
+  <button type="submit" class="btn btn-danger">수정</button>
 </form>
 
 </div>

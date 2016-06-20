@@ -1,5 +1,6 @@
+<%@page import="board.dto.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" session="true"%>
+    pageEncoding="EUC-KR" import="board.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,92 +10,37 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
-<form name="form1" method="post" action="board_reg.do">
+<body>
+<% BoardDTO brd =(BoardDTO)request.getAttribute("boardinforead"); %>
 <div class="container">
+<h1>게시판 </h1>
+<hr/>
+<form name="insert" method="post" action="board_reg.do">
 
-
-<table align="center" cellpadding="0" cellspacing="0" width="479">
-    <tr>
-        <td width="469" colspan="2" height="42">
-            <p align="center"><code><b><span style="font-size:20pt;">게시물 등록</span></b></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="479" colspan="2">
-            <hr></td>
-    </tr>
+ <fieldset class="form-group">
+ 	<label for="exampleInputEmail1">아이디</label>
+    <input type="text" class="form-control" id="mem_id" name="mem_id" placeholder="아이디를 입력하세요">
+    <small class="text-muted">아이디를  입력해주세요</small>
+  </fieldset>
  
-    <tr>
-        <td width="104">
-            <p><code><b>아이디</b></code></p>
-        </td>
-        <td width="359">
-            <p><code><input type="text" name="mem_id" size="30"></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="104">
-            <p><code><b>제목</b></code></p>
-        </td>
-        <td width="359">
-            <p><code><input type="text" name="title" size="50"></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="104">
-            <p><code><b>내용</b></code></p>
-        </td>
-        <td width="359">
-            <p><textarea name="text" rows="10" cols="50"></textarea></p>
-        </td>
-    </tr>
-    
-   <!-- 
-    <tr>
-        <td width="104">
-            <p><code><b>성명</b></code></p>
-        </td>
-        <td width="359">
-            <p><code><input type="text" name="name" size="30"></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="104">
-            <p><code><b>주소</b></code></p>
-        </td>
-        <td width="359">
-            <p><code><input type="text" name="addr" size="51"></code></p>
-        </td>
-    </tr>
-  -->
-    
-   
-   
-    <tr>
-        <td width="479" colspan="2">
-            <hr>        </td>
-    </tr>
-    <tr>
-        <td width="479" colspan="2" align="center">
-	<button type="submit" class="btn btn-success">게시물 등록</button>        
-	
-
-	 </td>
-    </tr>
-        
-    <tr>
-        <td width="479" colspan="2" height="9" valign="bottom">   
-        		<br/>         
-                <p><code><a href="/webTest/MemberListServlet">리스트(L)</a></code></p>
-        </td>
-    </tr>
-    <tr>
-        <td width="479" colspan="2" height="57" valign="bottom">            <p align="right"><code><input type="hidden" name="jumin"><input type="hidden" name="ilsi"></code></p>
-        </td>
-    </tr>
-</table>
-</div>
+  <fieldset class="form-group">
+    <label for="exampleInputEmail1">제목</label>
+    <input type="text" class="form-control" id="title" name="title" laceholder="제목을 입력하세요">
+    <small class="text-muted">제목을 입력해주세요</small>
+  </fieldset>
+ 
+  <fieldset class="form-group">
+    <label for="exampleTextarea">내용</label>
+    <textarea class="form-control" id="exampleTextarea" name="text" rows="10" ></textarea>
+  	<small class="text-muted">내용을 입력해주세요</small>
+  </fieldset>
+ 
+  <button type="submit" class="btn btn-success">등록</button>
 </form>
+
+</div>
+
+
+
 </body>
 </html>

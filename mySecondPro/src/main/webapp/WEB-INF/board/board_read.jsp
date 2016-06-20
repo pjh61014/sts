@@ -61,7 +61,7 @@
      </tbody>
 </table>
 <br/>
-<button type="button" class="btn btn-info" onclick="location.href='board_list.do'">리스트</button>
+<button type="button" class="btn btn-primary" onclick="location.href='board_list.do'">리스트</button>
 <button type="button" class="btn btn-info" onclick="location.href='board_update.do?board_no=<%=brd.getBoard_no()%>'">게시물 수정</button>        
 <button type="button" class="btn btn-danger" onclick="location.href='board_delete.do?board_no=<%=brd.getBoard_no()%>'">게시물 삭제</button>       
 </div>
