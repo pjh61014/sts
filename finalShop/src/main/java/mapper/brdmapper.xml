@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kitri.brd">
+	<insert id="insert" parameterType="brd">
+		insert into tb_board
+		values(boardno.nextval,#{mem_id},#{title},#{text},0,1,to_char(sysdate,'YYYYMMDDHH24MISS'),null)
+	</insert>
+
+	<select id="brdlist" resultType="brd">
+		select board_no,mem_id,title,count,reg_dtm from tb_board where del_flg=1 ORDER BY reg_dtm desc
+	</select>
+
+	<select id="boardread" resultType="brd" parameterType="String">
+		select board_no,mem_id,title,text,count,reg_dtm,mod_dtm from tb_board
+		where board_no=#{board_no}
+
+	</select>
+
+	<update id="countup" parameterType="String">
+		update TB_BOARD SET COUNT=NVL(COUNT,0)+1 where BOARD_NO =#{board_no}
+	</update>
+	
+	<update id="update" parameterType="brd">
+		update TB_BOARD SET title=#{title},text=#{text},mod_dtm=to_char(sysdate,'YYYYMMDDHH24MISS') where BOARD_NO =#{board_no}
+	</update>
+
+	<update id="delete" parameterType="String">
+		update TB_BOARD set DEL_FLG=0 WHERE BOARD_NO=#{board_no}
+	</update>
+	
+</mapper>

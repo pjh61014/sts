@@ -7,11 +7,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<link type="text/css" href="/minishop/common/css/master.css"
+<link type="text/css" href="/finalShop/resources/common/css/master.css"
 	rel="stylesheet" media="screen,print" />
-<link type="text/css" href="/minishop/common/css/print.css"
+<link type="text/css" href="/finalShop/resources/common/css/print.css"
 	rel="stylesheet" media="print" />
-<link type="text/css" href="/minishop/common/css/mall.css"
+<link type="text/css" href="/finalShop/resources/common/css/mall.css"
 	rel="stylesheet" media="screen,print" />
 <%
 	ArrayList<ProductDTO> prdlist = (ArrayList<ProductDTO>) request.getAttribute("prdlist");
@@ -40,11 +40,11 @@
 					onclick="dataSort( 4, 'PR_NAME asc' ); return false;">상품명순</a></li>
 				<li class="typeGallery"><a href="#"
 					onclick="dataViewType( 2 );return false;"> <img
-						src="/minishop/images/icon/icn_gllry_2.gif" alt="갤러리 형" />
+						src="/finalShop/resources/images/icon/icn_gllry_2.gif" alt="갤러리 형" />
 				</a></li>
 				<li class="typeList"><a href="#"
 					onclick="dataViewType( 1 );return false;"> <img
-						src="/minishop/images/icon/icn_list_2.gif" alt="리스트 형" />
+						src="/finalShop/resources/images/icon/icn_list_2.gif" alt="리스트 형" />
 				</a></li>
 				<li class="last"><select name="r_limitrow"
 					onchange="pageLimitRow();" title="개수">
@@ -73,7 +73,7 @@
 				<li><a href="#" class="goodsLink"
 					onclick="formGetSubmit( '/commerce/foffice/product/product.lime', 'r_prcode=G4135_F0002_X0004_K0040' )">
 						<img
-						src="/minishop/images/product/<%=prdInfo.getImg_gen_file_nm()%>"
+						src="/finalShop/resources/images/product/<%=prdInfo.getImg_gen_file_nm()%>"
 						alt="상품" class="photo" /><br /> <span class="proPrice1"><%=prdInfo.getPrd_nm()%></span>
 				</a><br /> <span class="proPrice2"><%= prdInfo.getSell_prc_unit() %>원</span>
 
@@ -81,9 +81,9 @@
 
 						<li><a href="#"
 							onclick="basketIn( 'G4135_F0002_X0004_K0040' );return false;"><img
-								src="/minishop/images/icon/bcon_cart.gif" alt="장바구니" /></a></li>
+								src="/finalShop/resources/images/icon/bcon_cart.gif" alt="장바구니" /></a></li>
 						<li><a href="#" onclick="imageZoom( '1010' );"><img
-								src="/minishop/images/icon/bcon_zoom.gif" alt="확대보기" /></a></li>
+								src="/finalShop/resources/images/icon/bcon_zoom.gif" alt="확대보기" /></a></li>
 
 					</ul></li>
 				<%

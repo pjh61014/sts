@@ -32,14 +32,13 @@
 </script> -->
 </head>
 <body>
-	<div style="width: 800px; margin-left: auto; margin-right: auto;">
+	<div style="width: 800px; height:1000px; margin-left: auto; margin-right: auto;">
 		
-		<div>
+		<div >
 			<tiles:insertAttribute name="top2"/>
 		</div>
 
-
-		<div style="width: 900px; margin-left: auto; margin-right: auto;">
+		<div style="width: 900px; margin-top:auto; margin-left: auto; margin-right: auto;">
 			<tiles:insertAttribute name="prdlist2"/>
 		</div>
 		

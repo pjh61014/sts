@@ -8,7 +8,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		location.href="/minishop/prdlist.do"
+		location.href="/finalShop/prdlist.do"
 	</script>
 </body>
 </html>
